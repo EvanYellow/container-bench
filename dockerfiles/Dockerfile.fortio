@@ -1,1 +1,1 @@
-FROM swr.cn-north-4.myhuaweicloud.com/asm/fortio:latest
+FROM fortio/fortio:latest
