@@ -1,1 +1,1 @@
-FROM swr.cn-east-3.myhuaweicloud.com/paas_perf/grafana:7.1.4
+FROM grafana:7.1.4

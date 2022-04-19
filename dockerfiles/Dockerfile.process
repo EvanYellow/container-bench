@@ -1,1 +1,1 @@
-FROM swr.cn-east-3.myhuaweicloud.com/paas_perf/process-exporter-0602-1:latest
+FROM process-exporter-0602-1:latest

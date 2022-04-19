@@ -1,1 +1,1 @@
-FROM swr.cn-east-3.myhuaweicloud.com/paas_perf/fortio:1.11.5
+FROM fortio:1.11.5

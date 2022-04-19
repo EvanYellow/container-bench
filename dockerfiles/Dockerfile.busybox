@@ -1,1 +1,1 @@
-FROM swr.cn-east-3.myhuaweicloud.com/paas_perf/busybox:latest
+FROM busybox:latest
