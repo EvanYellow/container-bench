@@ -1,1 +1,1 @@
-FROM fortio:1.11.5
+FROM fortio/fortio:1.11.5

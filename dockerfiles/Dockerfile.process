@@ -1,1 +1,1 @@
-FROM process-exporter-0602-1:latest
+FROM opvizorpa/process-exporter:latest

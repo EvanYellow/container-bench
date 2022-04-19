@@ -1,1 +1,1 @@
-FROM node-exporter:v1.0.1
+FROM bitnami/node-exporter:v1.0.1

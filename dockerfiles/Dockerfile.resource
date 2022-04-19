@@ -1,2 +1,2 @@
-FROM resource-consumer:1.5
+FROM e2eteam/resource-consumer:1.5
 

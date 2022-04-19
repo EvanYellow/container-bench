@@ -1,4 +1,4 @@
-FROM perf-nginx:v10.1
-#ADD check-network.sh /
-#ADD get_pps.sh /home/paas
-#RUN chmod +x /home/paas/get_pps.sh
+#FROM perf-nginx:v10.1
+ADD check-network.sh /
+ADD get_pps.sh /home/paas
+RUN chmod +x /home/paas/get_pps.sh

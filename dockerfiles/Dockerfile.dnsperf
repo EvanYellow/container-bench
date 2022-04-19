@@ -1,6 +1,6 @@
-FROM dnsperf:2.4.2-centos7.9
+#FROM dnsperf:2.4.2-centos7.9
 
 #
-#FROM sysbench:1.0.17-centos7
-#ADD dnsperf-2.4.2.tar.gz ./
-#RUN yum install -y file; cd dnsperf-2.4.2; ./configure; make; make install
+FROM sysbench:1.0.17-centos7
+ADD dnsperf-2.4.2.tar.gz ./
+RUN yum install -y file; cd dnsperf-2.4.2; ./configure; make; make install
