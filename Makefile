@@ -370,3 +370,11 @@ service_metric: deploy1 fortio ##  service_metric
 pod_metric: deploy1 fortio ##  pod_metric
 	prometheus_url=$(prometheus_url) bash -x $(current_dir)/script/run_network_nginx.sh 2>logs/$@.log 1>&2
 
+run_network_lat: deploy2 ##  connect_metric
+	prometheus_url=$(prometheus_url) bash -x $(current_dir)/script/run_network_lat.sh 2>logs/$@.log 1>&2
+
+test: ## test svc
+	prometheus_url=$(prometheus_url) bash $(current_dir)/script/run_fortio_in_container.sh $(namespace) http://$(url) 2>logs/podto_${prefix}_$(url).log 1>&2
+
+call_pod_test: ## test
+	prefix="pod" url=`kubectl get pods -n $(namespace) --selector app=perf-test-1 -o jsonpath='{.items[0].status.podIP}'` make test
