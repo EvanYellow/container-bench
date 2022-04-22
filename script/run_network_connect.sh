@@ -17,7 +17,7 @@ sleep 30
 
 currentTimeStamp=`date +%s.%2N`
 kubectl exec $podserver_name -- sh -c 'cd /home/paas; bash ./con_netserver.sh'
-kubectl exec $podclient_name -- sh -c 'cd /home/paas; rm -f tcp_crr.log; sed -i "s/20/100/g" con_netperf.sh; bash ./con_netperf.sh '$podserver_ip
+kubectl exec $podclient_name -- sh -c 'cd /home/paas; rm -f tcp_crr.log; bash ./con_netperf.sh '$podserver_ip
 sleep 120
 kubectl exec $podclient_name -- sh -c 'cd /home/paas; bash ./con_collect.sh'
 
